@@ -1,5 +1,15 @@
 <html>
     <body>
-        <h1>oi</h1>
+        <h1 id="oi">oi</h1>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+      
+        <script>
+            var socket=io.connect()
+            socket.on('connect',()=>{
+                var oi=document.querySelector('#oi')
+                oi.textContent='conectado'
+            })
+        </script>
     </body>
 </html>
